@@ -96,4 +96,26 @@ body ::-moz-placeholder {
 }
 body ::placeholder {
   font-size: 10px;
+}
+body #submitBtn {
+  background: var(--blackColor);
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+}
+body #submitBtn:hover {
+  background: rgb(203, 203, 235);
+  color: var(--blackColor);
+}
+body .registerLink {
+  display: block;
+  font-size: 13px;
+  color: var(--blackColor);
+  text-align: center;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+body .registerLink a {
+  text-decoration: none;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
