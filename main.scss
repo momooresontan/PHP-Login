@@ -57,7 +57,7 @@ body {
     border-radius: 50%;
     z-index: 2;
     top: -20%;
-    display: none;
+    //display: none;
   }
 
   .titleDev {
@@ -74,8 +74,32 @@ body {
     }
   }
 
-  .row {
+  .rows {
     display: grid;
     position: relative;
+    gap: 1rem;
+    z-index: 1000;
+    transform: translateY(-1rem);
+    padding-bottom: 1rem;
+    .label {
+      display: block;
+      padding-bottom: 0.285rem;
+      font-size: 13px;
+    }
+  }
+
+  input {
+    width: 100%;
+    background: var(--inputColor);
+    border: none;
+    outline: none;
+    color: var(--blackColor);
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 3px;
+  }
+
+  ::placeholder {
+    font-size: 10px;
   }
 }
