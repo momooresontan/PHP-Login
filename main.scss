@@ -30,4 +30,52 @@ body {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+
+  .form-container {
+    width: 290px;
+    height: 450px;
+    padding: 0 1rem;
+    border-radius: 3px;
+    border: 1px solid rgb(234, 234, 234);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+    background-color: var(--primaryColor);
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .overlay {
+    position: absolute;
+    background: var(--secondaryColor);
+    content: "";
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    z-index: 2;
+    top: -20%;
+    display: none;
+  }
+
+  .titleDev {
+    position: relative;
+    width: 100%;
+    margin: 10px auto 5px;
+    text-align: center;
+    transform: translateY(-3rem);
+    z-index: 1000;
+    .title {
+      color: var(--blackColor);
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+  }
+
+  .row {
+    display: grid;
+    position: relative;
+  }
 }
