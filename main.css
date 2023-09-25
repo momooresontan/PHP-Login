@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primaryColor: #ad91cf;
+  --secondaryColor: rgb(196, 169, 230);
+  --blackColor: rgb(46, 46, 71);
+  --borderColor: rgb(46, 46, 71);
+  --inputColor: rgb(241, 241, 241);
+  --successColor: rgb(205, 237, 207);
+  --failureColor: rgb(255, 0, 0);
+}/*# sourceMappingURL=main.css.map */
