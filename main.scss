@@ -125,4 +125,11 @@ body {
       cursor: pointer;
     }
   }
+  .register-container {
+    height: 580px;
+    .overlay {
+      height: 590px;
+      top: -10%;
+    }
+  }
 }

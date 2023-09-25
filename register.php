@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<div class="form-container">
+<div class="register-container">
         <div class="overlay">
 
         </div>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="row">
                     <input type="submit" id="submitBtn" name="submit" value="Register">
-                    <span class="registerLink">Don't have an account? <a href="register.php">Register</a> </span>
+                    <span class="registerLink">Have an account already? <a href="index.php">Login</a> </span>
                 </div>
             </div>
         </form>

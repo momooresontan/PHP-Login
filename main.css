@@ -118,4 +118,11 @@ body .registerLink {
 body .registerLink a {
   text-decoration: none;
   cursor: pointer;
+}
+body .register-container {
+  height: 580px;
+}
+body .register-container .overlay {
+  height: 590px;
+  top: -10%;
 }/*# sourceMappingURL=main.css.map */
