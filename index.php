@@ -18,8 +18,16 @@
         <form action="" method="post">
             <div class="row grid">
                 <div class="row">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username">
+                    <label for="username">Username: </label>
+                    <input type="text" id="username" name="username" placeholder="Enter username" required>
+                </div>
+                <div class="row">
+                    <label for="username">Password: </label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                </div>
+                <div class="row">
+                    <input type="submit" id="submitBtn" name="submit" value="Login">
+                    <span class="registerLink">Don't have an account? <a href="register.php">Register here</a> </span>
                 </div>
             </div>
         </form>
