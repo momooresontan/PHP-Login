@@ -14,4 +14,18 @@
   --inputColor: rgb(241, 241, 241);
   --successColor: rgb(205, 237, 207);
   --failureColor: rgb(255, 0, 0);
+}
+
+html {
+  font-size: 90%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 }/*# sourceMappingURL=main.css.map */
