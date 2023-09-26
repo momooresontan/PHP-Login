@@ -5,4 +5,5 @@
     define("USER", "momo");
     define("PASSWORD", "123456");
     define("DATABASE", "login_php");
+    define("SITEURL", "http://localhost/PHPLogin/");
 ?>
