@@ -9,6 +9,13 @@
             <h1 class="title">Login</h1>
             <span class="subTitle">Welcome back!</span>   
         </div>
+
+        <?php
+            if(isset($_SESSION["noAdmin"])){
+                 echo $_SESSION["noAdmin"];
+            } 
+        ?>
+
         <form action="" method="POST">
             <div class="rows grid">
                 <div class="row">
@@ -44,7 +51,12 @@
 
         if($count > 0){
             $_SESSION["loginMessage"] = "<span class='success'>Welcome " . $username . " </span>";
-            header();
+            header("Location: " . SITEURL . "dashboard.php");
+            exit();
+        } else{
+            $_SESSION["noAdmin"] = "<span class='fail'>" . $username . " is not registered! </span>";
+            header("Location: " . SITEURL . "register.php");
+            exit();
         }
     }
 ?>
