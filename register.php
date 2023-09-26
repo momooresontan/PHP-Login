@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<div class="register-container">
+    <div class="register_container">
         <div class="overlay">
 
         </div>

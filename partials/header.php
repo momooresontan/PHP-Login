@@ -7,14 +7,3 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="dashboard">
-        <span>
-
-        </span>
-        <h1>Dashboard</h1>
-        <div class="logoutBtn">
-            <a href="logout.php">Logout</a>
-        </div>
-    </div>
-</body>
-</html>
