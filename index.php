@@ -35,5 +35,16 @@
         //echo "Yes, data submitted!";
         $username = $_POST["username"];
         $password = $_POST["password"];
+
+        $sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password'";
+        $result = mysqli_query($conn, $sql);
+
+        $count = mysqli_num_rows($result);
+        $row = mysqli_fetch_assoc($result);
+
+        if($count > 0){
+            $_SESSION["loginMessage"] = "<span class='success'>Welcome " . $username . " </span>";
+            header();
+        }
     }
 ?>
