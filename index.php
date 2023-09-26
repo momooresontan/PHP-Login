@@ -12,7 +12,8 @@
 
         <?php
             if(isset($_SESSION["noAdmin"])){
-                 echo $_SESSION["noAdmin"];
+                echo $_SESSION["noAdmin"];
+                unset($_SESSION["noAdmin"]);
             } 
         ?>
 
@@ -55,7 +56,7 @@
             exit();
         } else{
             $_SESSION["noAdmin"] = "<span class='fail'>" . $username . " is not registered! </span>";
-            header("Location: " . SITEURL . "register.php");
+            header("Location: " . SITEURL . "index.php");
             exit();
         }
     }
