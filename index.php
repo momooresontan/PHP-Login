@@ -1,4 +1,6 @@
-
+<?php 
+    include("partials/header.php");
+?>
     <div class="form-container">
         <div class="overlay">
 
@@ -24,3 +26,6 @@
             </div>
         </form>
     </div>
+<?php 
+    include("partials/footer.php");
+?>
