@@ -9,7 +9,7 @@
             <h1 class="title">Login</h1>
             <span class="subTitle">Welcome back!</span>   
         </div>
-        <form action="" method="post">
+        <form action="" method="POST">
             <div class="rows grid">
                 <div class="row">
                     <label for="username">Username: </label>
@@ -28,4 +28,12 @@
     </div>
 <?php 
     include("partials/footer.php");
+?>
+
+<?php 
+    if(isset($_POST["submit"])){
+        //echo "Yes, data submitted!";
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+    }
 ?>
