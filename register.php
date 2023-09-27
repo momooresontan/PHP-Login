@@ -55,7 +55,7 @@
 
         $result = mysqli_query($conn, $sql);
         if($result == true){
-            $_SESSION["accountCreated"] = "<span class='success'>Account " .$username. " created!</span>";
+            $_SESSION["accountCreated"] = "<span class='addedAccount'>Account " .$username. " created!</span>";
             header("Location: " .SITEURL. "index.php");
             exit();
         } else{

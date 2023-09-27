@@ -237,12 +237,18 @@ body .register_container .rows .registerLink a {
   text-decoration: none;
 }
 
-.success {
+.success,
+.addedAccount {
   text-align: center;
   padding: 10px 20px;
   background: var(--successColor);
   color: var(--blackColor);
   margin-bottom: 1rem;
+}
+
+.addedAccount {
+  margin: 0;
+  transform: translateY(100px);
 }
 
 .fail {

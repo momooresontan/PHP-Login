@@ -73,11 +73,5 @@
             header("Location: " . SITEURL . "index.php");
             exit();
         }
-
-        // if($count == 1 ){
-            
-        // } else{
-           
-        // }
     }
 ?>
