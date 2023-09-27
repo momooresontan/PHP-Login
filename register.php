@@ -37,3 +37,21 @@
 <?php 
     include("partials/footer.php");
 ?>
+
+<?php 
+    if(isset($_POST["submit"])){
+        $username = $_POST["username"];
+        $email = $_POST["email"];
+        $phone = $_POST["phone"];
+        $password = $_POST["password"];
+
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+        $sql = "INSERT INTO admin SET 
+        username = '$username',
+        email = '$email',
+        phone = '$phone',
+        password = '$passwordHash'";
+    }
+
+?>

@@ -50,12 +50,12 @@
         $count = mysqli_num_rows($result);
         $row = mysqli_fetch_assoc($result);
 
-        if($count > 0){
+        if($count == 1 ){
             $_SESSION["loginMessage"] = "<span class='success'>Welcome " . $username . " </span>";
             header("Location: " . SITEURL . "dashboard.php");
             exit();
         } else{
-            $_SESSION["noAdmin"] = "<span class='fail'>" . $username . " is not registered! </span>";
+            $_SESSION["noAdmin"] = '<span id="fail" class="fail">' . $username . ' is not registered!</span>';
             header("Location: " . SITEURL . "index.php");
             exit();
         }
