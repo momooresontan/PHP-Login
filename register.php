@@ -9,7 +9,7 @@
             <h1 class="title">Register</h1>
             <span class="subTitle">Thanks for choosing us!</span>   
         </div>
-        <form action="" method="post">
+        <form action="" method="POST">
             <div class="rows grid">
                 <div class="row">
                     <label for="username">Username: </label>
@@ -55,7 +55,13 @@
 
         $result = mysqli_query($conn, $sql);
         if($result == true){
-            $_SESSION["accountCreated"] = "<span class='success'>Account" .$username. "created!</span>";
+            $_SESSION["accountCreated"] = "<span class='success'>Account " .$username. " created!</span>";
+            header("Location: " .SITEURL. "index.php");
+            exit();
+        } else{
+            $_SESSION["unsuccessful"] = "<span class='fail'>Account " .$username. " failed to be created!</span>";
+            header("Location: " .SITEURL. "register.php");
+            exit();
         }
     }
 

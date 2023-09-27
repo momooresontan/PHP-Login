@@ -1,6 +1,13 @@
 <?php 
     include("partials/header.php");
 ?>
+    <?php 
+        if(isset($_SESSION["accountCreated"])){
+            echo $_SESSION["accountCreated"];
+            unset($_SESSION["accountCreated"]);
+        }
+    ?>
+
     <div class="form-container">
         <div class="overlay">
 
