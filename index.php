@@ -54,8 +54,8 @@
         $sql = "SELECT * FROM admin WHERE username = '$username'";
         $result = mysqli_query($conn, $sql);
 
-        $count = mysqli_num_rows($result);
-        $row = mysqli_fetch_assoc($result);
+        // $count = mysqli_num_rows($result);
+        // $row = mysqli_fetch_assoc($result);
 
         $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
         if($user){
@@ -74,10 +74,10 @@
             exit();
         }
 
-        if($count == 1 ){
+        // if($count == 1 ){
             
-        } else{
+        // } else{
            
-        }
+        // }
     }
 ?>
