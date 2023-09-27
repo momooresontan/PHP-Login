@@ -42,16 +42,21 @@
     if(isset($_POST["submit"])){
         $username = $_POST["username"];
         $email = $_POST["email"];
-        $phone = $_POST["phone"];
         $password = $_POST["password"];
+        $phone = $_POST["phone"];
 
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
         $sql = "INSERT INTO admin SET 
         username = '$username',
         email = '$email',
-        phone = '$phone',
-        password = '$passwordHash'";
+        password = '$passwordHash',
+        phone = '$phone'";
+
+        $result = mysqli_query($conn, $sql);
+        if($result == true){
+            $_SESSION["accountCreated"] = "<span class='success'>Account" .$username. "created!</span>";
+        }
     }
 
 ?>
