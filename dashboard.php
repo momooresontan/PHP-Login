@@ -3,7 +3,12 @@
 ?>
     <div class="dashboard">
         <span>
-
+            <?php 
+                if(isset($_SESSION["loginMessage"])){
+                    echo $_SESSION["loginMessage"];
+                    unset($_SESSION["loginMessage"]);
+                }
+            ?>
         </span>
         <h1>Dashboard</h1>
         <div class="logoutBtn">
