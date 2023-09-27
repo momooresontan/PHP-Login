@@ -262,3 +262,8 @@ body {
     }
   }
 }
+
+::selection {
+  background: var(--secondaryColor);
+  color: var(--blackColor);
+}

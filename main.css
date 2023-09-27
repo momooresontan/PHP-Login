@@ -262,4 +262,12 @@ body .register_container .rows .registerLink a {
   .dashboard h1 {
     font-size: 5rem;
   }
+}
+::-moz-selection {
+  background: var(--secondaryColor);
+  color: var(--blackColor);
+}
+::selection {
+  background: var(--secondaryColor);
+  color: var(--blackColor);
 }/*# sourceMappingURL=main.css.map */
