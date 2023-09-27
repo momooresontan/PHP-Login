@@ -51,20 +51,33 @@
         $username = $_POST["username"];
         $password = $_POST["password"];
 
-        $sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password'";
+        $sql = "SELECT * FROM admin WHERE username = '$username'";
         $result = mysqli_query($conn, $sql);
 
         $count = mysqli_num_rows($result);
         $row = mysqli_fetch_assoc($result);
 
-        if($count == 1 ){
-            $_SESSION["loginMessage"] = "<span class='success'>Welcome " . $username . " </span>";
-            header("Location: " . SITEURL . "dashboard.php");
-            exit();
-        } else{
-            $_SESSION["noAdmin"] = '<span id="fail" class="fail">' . $username . ' is not registered!</span>';
+        $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        if($user){
+            if(password_verify($password, $user["password"])){
+                $_SESSION["loginMessage"] = "<span class='success'>Welcome " . $username . " </span>";
+                header("Location: " . SITEURL . "dashboard.php");
+                exit();
+            }else{
+                $_SESSION["noAdmin"] = '<span id="fail" class="fail">Invalid username or password!</span>';
+                header("Location: " . SITEURL . "index.php");
+                exit();
+            }
+        }else{
+            $_SESSION["noAdmin"] = '<span id="fail" class="fail">Invalid username or password!</span>';
             header("Location: " . SITEURL . "index.php");
             exit();
+        }
+
+        if($count == 1 ){
+            
+        } else{
+           
         }
     }
 ?>
